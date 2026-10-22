@@ -1,7 +1,5 @@
 package no.hvl.dat100.javel.oppgave3;
 
-import no.hvl.dat100.javel.oppgave4.Customers;
-
 public class CustomerMain {
 
     public static void main(String[] args) {
@@ -11,11 +9,23 @@ public class CustomerMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
+        Customer customer = new Customer(
+                "Alice Smith",
+                "alice@example.com",
+                1001,
+                PowerAgreementType.SPOTPRICE);
 
-         Write code that creates a Customer object and teste the methods implemented in the class
+        System.out.println(customer);
 
-        */
+        customer.setName("Alice Hansen");
+        customer.setEmail("alice.hansen@example.com");
+        customer.setCustomerId(1010);
+        customer.setAgreement(PowerAgreementType.NORGESPRICE);
+
+        System.out.println("\nEtter endring:");
+        System.out.println(customer.getCustomerId());
+        System.out.println(customer.getName());
+        System.out.println(customer.getEmail());
+        System.out.println(customer.getAgreement());
     }
 }
